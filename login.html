@@ -1,0 +1,273 @@
+<!doctype html> <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/layout.css" >
+    <link rel="stylesheet" href="css/login.css" >
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="js/angular.min.js"></script>
+    <script src="db/Students.js"></script>
+    <title>đăng nhập</title>
+  </head>
+  <body class="cl">
+    <div class="container" ng-app="myapp" ng-controller="myctrl">
+        <header class="row">    
+          <div class="col-md-12">
+            <img src="images/banner.png" width="100%" />
+          </div>   
+        </header>
+          <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i>&nbsp;FPT PolyTechnic</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="GT.html"><i class="fab fa-discord"></i>&nbsp;Giới Thiệu<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="LH.html"><i class="fas fa-address-card"></i>&nbsp;Liên Hệ<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="gopy.html"><i class="far fa-comments"></i>&nbsp;Góp Ý<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="HD.html"><i class="fas fa-question"></i>&nbsp;Hỏi Đáp<span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    
+                </ul>
+                <ul class="navbar-nav nav ml-auto" >
+                    <li class="nav-item dropdown" >
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <font color ="black" class="tk">Tài khoản</font> 
+                     <style>
+                      .tk{
+                       background:
+              url("images/bg13_zps2612a7c5.gif") repeat scroll 0 0%,
+              url("images/bg4_zps012f7fcf.gif") repeat scroll 0 0%,
+              url("images/bg5_zps9146c4c3.gif") repeat scroll 0 0;
+            color: white;
+          font-weight: bold;
+          text-shadow: 1px 1px 0 #FF0000, 1px 2px 0 #000000, 1px 1px 6px #8B0000, 1px 1px 9px #FF0000
+                      }
+                    </style>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="login.html"></i><i class="fas fa-sign-in-alt"></i>&nbsp;Đăng nhập</a>
+                      <a class="dropdown-item" href="Dangki.html"><i class="fas fa-user-tie"></i>&nbsp;Đăng ký thành viên</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i>&nbsp;Đăng xuất</a>
+                      <a class="dropdown-item" href="doipass.html"><i class="fas fa-key"></i>&nbsp;Đổi mật khẩu</a>
+                      <a class="dropdown-item" href="capnhat.html"><i class="far fa-address-card"></i>&nbsp;Cập nhật hồ sơ</a>
+                   
+                    </div>
+                  </li>
+             </ul>
+                   
+                    
+                </form>
+            </div>
+        </nav>  
+        <div class="row">
+        
+          <article class="col-md-9" style="background-color: deepskyblue;">
+            <div class="container">
+              <div class="row" style="width: 130%;">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto"  >
+                  <div class="card card-signin my-5" style="margin-left:  -70px; margin-right: 25%;">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Đăng Nhập</h5>
+                      <form class="form-signin" name="frm">
+                        <div class="form-label-group">
+                          <input type="text" name="txtFullname" id="username_email" ng-model="user.username"
+                           class="form-control" placeholder="Email address" required autofocus>
+                           <span ng-hide="frm.txtFullname.$valid"></span>
+                           
+                          <label for="username_email">Tên đăng nhập </label>
+
+                        </div>
+          
+                        <div class="form-label-group">
+                          <input type="password" id="password" name="password" ng-model="user.password"
+                           style="width: 310px;" class="form-control" placeholder="Password" required>
+                          <span ng-hide="frm.password.$valid"> </span>
+                          <label for="password">Mật Khẩu</label>
+                        </div>
+          
+                        <div class="custom-control custom-checkbox mb-3">
+                          <input type="checkbox" class="custom-control-input" id="customCheck1">
+                          <label class="custom-control-label" for="customCheck1">Ghi Nhớ Mật Khẩu</label>
+                        </div>
+                        <center><button class="btn btn-lg btn-primary btn-block text-uppercase" 
+                          style="width: 50%;" type="submit" ng-click="login()" > Sign in</button></center>
+                          <span class="text-info font-italic">{{msg}}</span>
+                      </form>
+                          <!-------Quên Pass--------->
+
+                          <div >
+                            <button onclick="document.getElementById('id01').style.display='block'" 
+                            class="d-block text-center  mt-2 small" style="margin-left:   100px;">Quên Mật Khẩu</button>
+                          
+                            <div id="id01" class="w3-modal">
+                              <div class="w3-modal-content">
+                                <div class="w3-container">
+
+                                          <h1>Quên mật khẩu </h1>
+
+
+        <form  >
+                   <p>Nếu bạn đã quên mật khẩu của mình, bạn có thể sử dụng mẫu này để thiết lập lại mật khẩu của bạn. 
+                     Bạn sẽ nhận được một email hướng dẫn.</p>
+                                    
+              <div  >
+              <label for="username">Tên tài khoản: </label>
+              <input type="text" name="ten" class="textCtrl" id="username" 
+              ng-model="user.username" autofocus="true"  placeholder="Username" required />
+              <span ng-hide="frm.ten.$valid" class="text-danger font-italic">
+                
+                </span>
+                </div>
+                <div style="width:30%">
+                  <label for="email">Email: </label>
+                  <input type="email" name="email" class="emailCtrl" id="email" ng-model="user.email" placeholder="Email" required
+                   />
+                  <span ng-hide="frm.email.$valid" class="text-danger font-italic" >
+                   
+                  </span>
+                </div>
+               <fieldset>
+                 <div>
+                   <label style="bottom: 200px;">Mã xác nhận:<label>
+                   </div>
+                 <form >
+                      <div class="g-recaptcha" data-sitekey="6Ld-KCcTAAAAAJTLqpKC3yba2tZZlytk0gtSxy0_"></div>
+                      <span  class="text-info font-italic">{{msg}}</span>
+                      <div class="input-group mb-4">
+                          <div ng-bind ="user.password" class="form-control alert-into" ></div>
+                      </div>
+       </form>
+
+                 </fieldset>
+                          <div style="text-align: center;">
+                           <button class="btn btn-primary" type="button" ng-click="quenmatkhau()" >Lấy Lại Mật Khẩu</button>
+                           <button type="button" class="btn btn-dark"><i class="fa fa-trash"></i> <a href="login.html">THOÁT</a></button>
+
+                        </div>
+                         </form>
+      
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!---------------->
+                        <hr class="my-4">
+                        <button class="btn btn-danger btn-google btn-block text-uppercase" type="submit"  >
+                          <i class="fab fa-google mr-2"></i> <a href="https://accounts.google.com/ServiceLogin/identifier?flowName=GlifWebSignIn&flowEntry=AddSession">Sign in with Google</a></button>
+                        <button class="btn btn-primary btn-facebook btn-block text-uppercase" type="submit">
+                          <i class="fab fa-facebook-f mr-2"></i><a href="https://www.facebook.com/login"> Sign in with Facebook</a></button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </article>
+        <aside class="col-md-3 " >
+            <div class="card">
+              <div class="card-header" data-toggle="collapse" href="#collapseExample1" role="button"
+              aria-expanded="false" aria-controls="collapseExample" >
+              <i class="fas fa-list " ></i> <a class="rainbow">DANH MỤC MÔN HỌC     </a>  
+             <style>
+               .rainbow{
+                background:
+    
+    url("images/bg4_zps012f7fcf.gif") repeat scroll 0 0%,
+    url("images/bg5_zps9146c4c3.gif") repeat scroll 0 0;
+               }
+             </style>
+              </div>
+              <div class="collapse" id="collapseExample1">
+                <div class="list-group">
+                  <li class="list-group-item" ><a href="tracnghiem.html">Lập trình Android nâng cao</a></li>
+                  <li class="list-group-item" ng-repeat="x in subjects">{{x.Name}}</li>
+                </div>
+              </div>
+            </div>
+          </aside>
+          </div>
+
+
+          <script>
+            var app = angular.module('myapp', []);
+            app.controller('myctrl', function ($scope, $http) {
+              $http.get('db/Students.js').then(function (response) {
+                $scope.students = response.data;
+              });
+              $scope.subjects = [];
+              $http.get('db/Subjects.js').then(function (response) {
+                $scope.subjects = response.data;
+              }, function (response) {
+                alert("lỗi");
+              });
+              $scope.user = {};
+              $scope.msg = "";
+              $scope.login = function () {
+                var i;
+                for (i = 0; i < $scope.students.length; i++) {
+                  if ($scope.students[i].username == $scope.user.username && $scope.students[i].password == $scope.user.password) {
+                    alert('Đăng nhập thành công' ) ;
+                     window.location.href="monhoc.html";
+                     break;
+                  } else {
+                    $scope.msg = "Tài khoản hoặc mật khẩu không đúng";
+                  }
+                }
+                return 0;
+              }
+              //Quên Mật Khẩu
+              $scope.user = {};
+              $scope.msg = "";
+              $scope.quenmatkhau = function () {
+                var i;
+                for (i = 0; i < $scope.students.length; i++) {
+                  if ($scope.students[i].username == $scope.user.username && $scope.students[i].email == $scope.user.email) {
+                    $scope.msg = "Mật Khẩu của bạn :", ($scope.students[i].password);
+                    $scope.user.password = ($scope.students[i].password);
+                    return 1;
+                  } else {
+                    $scope.msg = "Tài khoản không tồn tại";
+                  }
+                }
+                return 0;
+              }
+              // THÊM THÔNG TIN
+              $scope.student ={};
+          $scope.students=[];
+          $scope.index=-1;
+            });
+            app.controller("myctrl1", function($scope){
+          $scope.insert =function(){
+            $scope.$parent.students.push($scope.$parent.student);
+            
+          }
+              });
+              app.controller("myctrl2", function($scope){
+          $scope.$parent.students = [];
+          
+            });
+          </script>
+  </body>
+</html>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

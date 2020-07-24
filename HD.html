@@ -1,0 +1,213 @@
+<!doctype html> <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="js/angular.min.js"></script>
+    <link rel="stylesheet" href="css/layout.css" >
+    <title>Hỏi Đáp</title>
+    <style>
+        #more {display: none;}
+    </style>
+  </head>
+  <body class="cl">
+    <div class="container"  ng-app="myapp" ng-controller="myctrl">
+        <header class="row">    
+          <div class="col-md-12">
+            <img src="images/banner.png" width="100%" />
+          </div>   
+        </header>
+          <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i>&nbsp;FPT PolyTechnic</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="GT.html"><i class="fab fa-discord"></i>&nbsp;Giới Thiệu<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="LH.html"><i class="fas fa-address-card"></i>&nbsp;Liên Hệ<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="gopy.html"><i class="far fa-comments"></i>&nbsp;Góp Ý<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="HD.html"><i class="fas fa-question"></i>&nbsp;Hỏi Đáp<span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    
+                </ul>
+                <ul class="navbar-nav nav ml-auto" >
+                    <li class="nav-item dropdown" >
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <font color ="black" class="tk">Tài khoản</font> 
+                      <style>
+                       .tk{
+                        background:
+               url("images/bg13_zps2612a7c5.gif") repeat scroll 0 0%,
+               url("images/bg4_zps012f7fcf.gif") repeat scroll 0 0%,
+               url("images/bg5_zps9146c4c3.gif") repeat scroll 0 0;
+             color: white;
+           font-weight: bold;
+           text-shadow: 1px 1px 0 #FF0000, 1px 2px 0 #000000, 1px 1px 6px #8B0000, 1px 1px 9px #FF0000
+                       }
+                     </style>
+                     </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="login.html"></i><i class="fas fa-sign-in-alt"></i>&nbsp;Đăng nhập</a>
+                      <a class="dropdown-item" href="Dangki.html"><i class="fas fa-user-tie"></i>&nbsp;Đăng ký thành viên</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i>&nbsp;Đăng xuất</a>
+                      <a class="dropdown-item" href="doipass.html"><i class="fas fa-key"></i>&nbsp;Đổi mật khẩu</a>
+                      <a class="dropdown-item" href="capnhat.html"><i class="far fa-address-card"></i>&nbsp;Cập nhật hồ sơ</a>
+                   
+                    </div>
+                  </li>
+             </ul>
+                   
+                    
+                </form>
+            </div>
+        </nav>  
+        <div class="row">
+          <article class="col-sm-9" style="text-align: center;"> 
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Câu 1: Trong Quá Trình Học, Tôi Cần Hỏi Đáp Về Một Số Thắc Mắc Thì Làm Như Thế Nào 
+                      </button>
+                    </h2>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Bạn Có thể gửi câu hỏi dến mục Gửi Câu Hỏi bên dưới
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Câu 2: Thời Gian Học như thế nào khi tôi đăng ký
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Lịch Học  sẽ được gửi vào Email của bạn
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Câu 3 : Trong lúc học tôi có việc bận ngoài ý muốn thì tôi có dừng quá trình học lại được không
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Đêm không ngủ đêm bỗng dài vô tận 
+                    Có một mình mới thấy nhớ mong ai
+                    Cho ta gửi chút tình cho trăng nhé 
+                    Đến bên người ta thương nhớ đêm nay. 
+                    </div>
+                  </div>
+                </div>
+              
+              
+             <!-----Gửi Câu hỏi---->      
+             <div >
+                <button onclick="document.getElementById('id01').style.display='block'" 
+                class="d-block text-center " style="margin-left: 350px;font-size: 20px; ">Gửi Câu Hỏi</button>
+              
+                <div id="id01" class="w3-modal">
+                  <div class="w3-modal-content">
+                    <div class="w3-container">
+                    <form style="background-color: lightsteelblue;" >
+                           <h3>Bạn Hãy Điền thông tin của bạn và gửi câu hỏi về cho chúng tôi</h3>          
+                    <div>
+                    <label >Họ Và Tên:</label>
+                    <input type="text" style="width:750px;" name="fullname" class="textCtrl" id="fullname" autofocus="true" placeholder="Họ Và Tên" />
+                     </div>
+                     <div>
+                     <label >Email:</label>
+                    <input type="email" style="width:750px;" name="email" class="textCtrl" id="email" autofocus="true" placeholder=" Email" />
+                    </div>
+
+                     <div>
+                    <label> Câu Hỏi</label>
+                    <input type="text" style="width:750px;" name="question" min="0" max="500" 
+                    class="textCtrl" id="fullname" autofocus="true"  placeholder="Chỉ từ 0 đến 200 Từ"/>
+                    </div>
+        
+
+                                <div style="text-align: center;">
+                                <button class="btn btn-primary" ><a href="HD.html" >Gửi Câu hỎI</a></button>
+                                </div>
+                                </form>
+
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+              
+            </div>
+          </article>
+        <aside class="col-md-3 " >
+            <div class="card">
+              <div class="card-header" data-toggle="collapse" href="#collapseExample1" role="button"
+              aria-expanded="false" aria-controls="collapseExample">
+              <i class="fas fa-list " ></i> <a class="rainbow">DANH MỤC MÔN HỌC     </a>  
+              <style>
+                .rainbow{
+                 background:
+     
+     url("images/bg4_zps012f7fcf.gif") repeat scroll 0 0%,
+     url("images/bg5_zps9146c4c3.gif") repeat scroll 0 0;
+                }
+              </style>     
+              </div>
+              <div class="collapse" id="collapseExample1">
+                <div class="list-group">
+                  <li class="list-group-item" ><a href="tracnghiem.html">Lập trình Android nâng cao</a></li>
+                  <li class="list-group-item" ng-repeat="x in subjects">{{x.Name}}</li>
+    
+                </div>
+              </div>
+            </div>
+          </aside>
+          </div>
+
+
+    
+          <script>
+            var app = angular.module('myapp',[]);
+            app.controller('myctrl', function($scope,$http){
+                $scope.subjects = [];
+                $http.get('db/Subjects.js').then(function(response){
+                  $scope.subjects = response.data;
+                }, function (response){
+                    alert("lỗi");
+                });
+            });
+          </script>
+
+  </body>
+</html>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
